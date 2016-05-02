@@ -1,5 +1,5 @@
 package AirlineProject;
-
+// Declaring imports
 import java.awt.*;
 import java.awt.event.*;
 
@@ -20,7 +20,7 @@ public class Reservation extends JFrame implements ActionListener {
 	JTextField t1, t2;
 	Font font, titleFont;
 	
-
+        // Reservation method
 	Reservation() {
 		mbar = new MenuBar();
 		setMenuBar(mbar);
