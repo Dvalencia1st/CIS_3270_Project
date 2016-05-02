@@ -1,4 +1,3 @@
-
 package AirlineProject;
 
 import java.sql.*;
@@ -11,7 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class Cancel extends JFrame implements ActionListener {
-
+	
+   // Design layout
 	FlowLayout fL = new FlowLayout();
 	JLabel l1, l2, l3;
 	JTextField txt1;
@@ -26,7 +26,8 @@ public class Cancel extends JFrame implements ActionListener {
 	MenuBar mbar;
 	Menu m;
 	MenuItem m1_1;
-
+	
+//Declaring cancel method
 	Cancel() {
 		
 		mbar = new MenuBar();
@@ -36,11 +37,11 @@ public class Cancel extends JFrame implements ActionListener {
 		m1_1 = new MenuItem("GoBack to MainMenu");
 		m.add(m1_1);
 		
-		setBackground(Color.red);
+		
 		font = new Font("TimesRoman", Font.BOLD, 20);
 		setLayout(fL);
 
-		l1 = new JLabel("PNR No");
+		l1 = new JLabel("IdFlight_number");
 		l1.setFont(font);
 		add(l1);
 		txt1 = new JTextField(20);
@@ -73,6 +74,7 @@ public class Cancel extends JFrame implements ActionListener {
 
 		if (ae.getSource() == submitButton) {
 			try {
+				//Coonection to dtabase
 				Class.forName("com.mysql.jdbc.Driver");
 				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/flight_reservation","root","salmo911");
 
@@ -118,7 +120,6 @@ public class Cancel extends JFrame implements ActionListener {
 	    frame.setVisible(true);
 	  }
 }
-
 
 
 
