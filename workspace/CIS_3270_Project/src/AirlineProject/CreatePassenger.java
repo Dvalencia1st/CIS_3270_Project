@@ -87,6 +87,18 @@ public class CreatePassenger extends JFrame implements ActionListener {
 	    txtField4 = new JTextField(20);
 	    add(txtField4);
 	    
+	    l5 = new JLabel("Age");
+	    l5.setFont(font);
+	    add(l5);
+	    txtField5 = new JTextField(20);
+	    add(txtField5);
+	    
+	    l6 = new JLabel("Gender");
+	    l6.setFont(font);
+	    add(l6);
+	    txtField6 = new JTextField(20);
+	    add(txtField6);
+	    
 	    l7 = new JLabel("Address");
 	    l7.setFont(font);
 	    add(l7);
