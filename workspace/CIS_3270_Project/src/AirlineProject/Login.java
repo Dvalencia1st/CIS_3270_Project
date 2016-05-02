@@ -151,7 +151,7 @@ public class Login extends JFrame implements ActionListener {
 
 				         // Iterate through the result and print the student names
 				         while (resultSet.next()) {
-				        System.out.println(resultSet.getString("idFlight_number")+ "," +resultSet.getString("last_name") + ", " + resultSet.getString("first_name") + ", " + resultSet.getString("email"));
+				        System.out.println(resultSet.getString("id")+ "," +resultSet.getString("last_name") + ", " + resultSet.getString("first_name") + ", " + resultSet.getString("email"));
 				    }
 				  
 				}
