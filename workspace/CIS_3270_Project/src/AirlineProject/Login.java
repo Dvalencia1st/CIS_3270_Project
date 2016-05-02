@@ -1,4 +1,4 @@
-package AirlineProject;
+package AirlineProject;p
 
 import javax.swing.*;
 
@@ -20,19 +20,8 @@ public class Login extends JFrame implements ActionListener {
 	FlowLayout fL;
 
 	Font font;
-	
-	MenuBar mbar;
-	Menu m;
-	MenuItem m1_1;
 
 	public Login() {
-		
-		mbar = new MenuBar();
-		setMenuBar(mbar);
-		m = new Menu("MainMenu");
-		mbar.add(m);
-		m1_1 = new MenuItem("GoBack to MainMenu");
-		m.add(m1_1);
 		
 		User b = new User("b", "b", "b", "b", "b", "b", "b", "b", "b", true, "b");
 		s.add(b);
@@ -73,7 +62,6 @@ public class Login extends JFrame implements ActionListener {
 		pRButton.addActionListener(this);
 		submitButton.addActionListener(this);
 		regButton.addActionListener(this);
-		m1_1.addActionListener(this);
 	}
 
 	public static int SearchUser(String a) {
@@ -84,8 +72,6 @@ public class Login extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent ae) {
-		
-		
 		if (ae.getSource() == pRButton) {
 			PasswordRecovery p = new PasswordRecovery();
 			p.setSize(1000, 600);
@@ -175,4 +161,3 @@ public class Login extends JFrame implements ActionListener {
 	    frame.setVisible(true);
 	}
 }
-
