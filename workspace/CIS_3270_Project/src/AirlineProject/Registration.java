@@ -1,4 +1,5 @@
 package AirlineProject;
+package edu.gsu.cis.reservation;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
