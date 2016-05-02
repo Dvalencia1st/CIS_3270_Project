@@ -16,7 +16,9 @@ import java.sql.Statement;
 
 public class CheckAvailability extends JFrame implements ActionListener {
 	
-	JPanel jp = new JPanel();
+	
+	// declare the flowlayout, fonts, text labels and text fields. 
+	//Create the button objectsand choice object for the dropdown menu
 	FlowLayout fL;
 	JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12;
 	JTextField txtField2, txtField3, txtField4, txtField5, txtField6;
@@ -30,21 +32,13 @@ public class CheckAvailability extends JFrame implements ActionListener {
 	Font font;
 	Choice toFrom = new Choice();
 	
-	//private ImageIcon image1;
-	//private JLabel label1;
-	
-	
-	
 	MenuBar mbar;
 	Menu m;
 	MenuItem m1_1;
 	
 	public CheckAvailability() {	
 		
-		/*setLayout(new FlowLayout());
-		image1 = new ImageIcon(getClass().getResource("economic.jpg"));
-		label1 = new JLabel(image1);
-		add(label1);*/
+		// create the menu bar
 		
 		mbar = new MenuBar();
 		setMenuBar(mbar);
@@ -52,17 +46,20 @@ public class CheckAvailability extends JFrame implements ActionListener {
 		mbar.add(m);
 		m1_1 = new MenuItem("GoBack to MainMenu");
 		m.add(m1_1);
-		
-	setBackground(Color.BLUE);
+	//Set the font styles, size, and 
+	//Set the layout 
 	font = new Font("Gadugi", Font.BOLD, 18);
 	fL = new FlowLayout(FlowLayout.CENTER, 250, 10);
 	setLayout(fL);
     
 
     // Add labels and text fields to the frame
+    //Set the font of the label to the "font"
     l1 = new JLabel("To/From");
     l1.setFont(font);
     add(l1);
+    
+    //add the toFrom choice object for the drop down menu
     add(toFrom);
     toFrom.add("Al - NY : 1011");
     toFrom.add("AL - WI : 2011");
@@ -109,12 +106,15 @@ public class CheckAvailability extends JFrame implements ActionListener {
     txtField6 = new JTextField(20);
     add(txtField6);
     
-    
+    //add the submit and reset buttons 
+    //uses the implements ActionListener to process the event of hitting the buttons
     add(submitButton);
     add(resetButton);
     submitButton.addActionListener(this);
-	resetButton.addActionListener(this);
-	addWindowListener(new W());
+    resetButton.addActionListener(this);
+    
+    //allows us to interact with GUI
+    addWindowListener(new W());
 	
 	m1_1.addActionListener(this);
 	
@@ -124,7 +124,6 @@ public class CheckAvailability extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 		if (ae.getSource() == m1_1) {
 			MainMenu m = new MainMenu();
-			m.setBackground(Color.red);
 			m.setTitle("Main Menu");
 			m.setSize(400, 400);
 			m.setVisible(true);
@@ -174,7 +173,8 @@ public class CheckAvailability extends JFrame implements ActionListener {
     
 	
 
-  /** Main method */
+  /** Main method that sets the size of the whole frame and titles it. 
+  */
   public static void main(String[] args) {
     CheckAvailability frame = new CheckAvailability();
     frame.setTitle("Check");
