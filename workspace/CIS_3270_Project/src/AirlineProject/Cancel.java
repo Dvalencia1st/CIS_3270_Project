@@ -1,3 +1,4 @@
+
 package AirlineProject;
 
 import java.sql.*;
@@ -117,7 +118,6 @@ public class Cancel extends JFrame implements ActionListener {
 	    frame.setVisible(true);
 	  }
 }
-
 
 
 
