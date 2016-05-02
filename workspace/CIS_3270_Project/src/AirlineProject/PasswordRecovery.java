@@ -113,7 +113,7 @@ public class PasswordRecovery extends JFrame implements ActionListener {
 		}
 
 	}
-	
+	//dcelaring method
 	public static void main(String[] args) {
 		
 		PasswordRecovery frame = new PasswordRecovery();
