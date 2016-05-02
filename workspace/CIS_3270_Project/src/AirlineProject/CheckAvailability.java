@@ -1,5 +1,4 @@
 package AirlineProject;
-@@carolina
 
 import javax.swing.*;
 
@@ -134,11 +133,11 @@ public class CheckAvailability extends JFrame implements ActionListener {
 		if (ae.getSource() == submitButton) {
 
 			try {
-				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/flight_reservation", "root",
-						"salmo911");
+				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/AirlineSystem", "root",
+						"123123");
 
 				Statement stmt = con.createStatement();
-				ps = con.prepareStatement("Select * from ticket_number where Date=? and Flight_number=?");
+				ps = con.prepareStatement("Select * from Reservation where TravelDate=? and FlightNo=?");
 				ps.setString(1, txtField2.getText());
 				ps.setString(2, txtField3.getText());
 				rs = ps.executeQuery();
